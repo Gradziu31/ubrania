@@ -1,5 +1,7 @@
 $red: #c80000;
 $gray: #b7b7b7;
+$lightgray: #efeded;
+$dark-text: #242424;
 .container {
     header {
         display: flex;
@@ -33,5 +35,89 @@ $gray: #b7b7b7;
     .slider {
         background-image: url(../images/slider.png);
         min-height: 330px;
+    }
+    .content {
+        display: flex;
+        flex-direction: row;
+        margin: 0% 10%;
+        justify-content: space-between;
+        .small--photo {
+            display: flex;
+            flex-direction: column;
+            max-width: 265px;
+            max-height: 400px;
+            img {
+                -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+                -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+                box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+                margin: 20px 0px;
+                width: 100%;
+            }
+        }
+        .big--photo {
+            margin: 20px 0px;
+            img {
+                max-height: 840px;
+                max-width: 560px;
+                width: 100%;
+            }
+        }
+        .info--box {
+            max-width: 400px;
+            margin: 20px 0px;
+            .section--one {
+                padding: 20px;
+                border: 1px solid $gray;
+                background: $lightgray;
+                h2 {
+                    font-size: 1.5em;
+                    color: $dark-text;
+                }
+                .section--rate {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: nowrap;
+                    margin: 10px 0px;
+                    img {
+                        margin: 0px 2px;
+                    }
+                }
+                .section--price {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    h3 {
+                        padding: 10px 20px 0px 0px;
+                        font-weight: 900;
+                        font-size: 1.2em;
+                        span {
+                            color: $gray;
+                            text-decoration: line-through;
+                        }
+                    }
+                }
+            }
+            .section--desc {
+                padding: 20px;
+                border: 1px solid $gray;
+                border-top: none;
+                background: $lightgray;
+                p {
+                    font-weight: 900;
+                    color: $dark-text;
+                }
+            }
+            .section--more {
+                background: $lightgray;
+                padding: 20px;
+                border: 1px solid $gray;
+                border-top: none;
+                h3 {
+                    padding: 15px 0px;
+                    text-align: center;
+                    color: $dark-text;
+                }
+            }
+        }
     }
 }
