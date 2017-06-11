@@ -27,11 +27,12 @@
             </div>
         </header>
         <div class="slider">
+            <img src="images/slider.png" alt="">
         </div>
         <div class="content">
             <div class="small--photo">
-                <img src="images/photo-one.png" alt="">
-                <img src="images/photo-two.png" alt="">
+                <img src="images/photo-one.png" alt="" onclick="powieksz()">
+                <img src="images/photo-two.png" alt="" onclick="powieksz2()">
             </div>
             <div class="big--photo">
                 <img src="images/big-photo.png" alt="">
@@ -40,11 +41,18 @@
                 <div class="section--one">
                     <h2>BLUZKA UNI (firma)</h2>
                     <div class="section--rate">
-                        <img src="images/star.png" alt="">
-                        <img src="images/star.png" alt="">
-                        <img src="images/star.png" alt="">
-                        <img src="images/star.png" alt="">
-                        <img src="images/star.png" alt="">
+                        <div class="stars">
+                            <input type="radio" id="star5" name="star" value="5">
+                            <label for="star5">★</label>
+                            <input type="radio" id="star4" name="star" value="4">
+                            <label for="star4">★</label>
+                            <input type="radio" id="star3" name="star" value="3">
+                            <label for="star3">★</label>
+                            <input type="radio" id="star2" name="star" value="2">
+                            <label for="star2">★</label>
+                            <input type="radio" id="star1" name="star" value="1">
+                            <label for="star1">★</label>
+                        </div>
                     </div>
                     <div class="section--price">
                         <h3>49,90 zł</h3>
@@ -68,15 +76,16 @@
         </div>
         <div class="promo">
             <div class="promo-content">
-               
+
                 <div class="courier">
-                   <img src="images/truck-one.png" alt=""> 
+                    <img src="images/truck-one.png" alt="">
                     <h3>KURIER TYLKO<br><span>9,90 zł</span></h3>
                 </div>
-                
+
                 <div class="courier">
-                <img src="images/truck-two.png" alt="">
-                <h3>PRZY ZAKUPACH POWYŻEJ 150 zł<br> PRZESYŁKA <span>GRATIS !</span></h3></div>
+                    <img src="images/truck-two.png" alt="">
+                    <h3>PRZY ZAKUPACH POWYŻEJ 150 zł<br> PRZESYŁKA <span>GRATIS !</span></h3>
+                </div>
             </div>
         </div>
         <h1 class="info--sales">NAJCZĘŚCIEJ SPRZEDAWANE</h1>
@@ -101,11 +110,7 @@
                 <h2>Bluzka</h2>
                 <p>32,69zł</p>
             </div>
-            <div class="item">
-                <img src="images/photo-one.png" alt="">
-                <h2>Bluzka</h2>
-                <p>32,69zł</p>
-            </div>
+
 
         </div>
         <footer>
@@ -132,4 +137,27 @@
             </div>
         </footer>
     </div>
+    <script>
+        var countStars = function() {
+            var checkedRadio = document.querySelector('.stars input:checked');
+            console.log(checkedRadio.value);
+        };
+
+        document.querySelector('.stars').addEventListener('click', countStars);
+
+    </script>
+
+
+    <script>
+        var bigphoto = document.querySelector(".big--photo img");
+
+        function powieksz() {
+            bigphoto.src = "images/photo-one-big.png";
+        }
+
+        function powieksz2() {
+            bigphoto.src = "images/photo-two-big.png";
+        }
+
+    </script>
 </body>
