@@ -12,9 +12,11 @@ $footer-text: #cecece;
         flex-direction: row;
         margin: 0% 10%;
         align-items: center;
+        font-family: Generica;
         .logo {
             h1 {
                 font-size: 2.2em;
+                font-weight: 900;
                 span {
                     color: $red;
                 }
@@ -27,6 +29,7 @@ $footer-text: #cecece;
                 li {
                     padding: 30px 15px;
                     transition: 300ms;
+                    font-weight: 900;
                     &:hover {
                         background: $gray;
                         color: $red;
@@ -55,6 +58,7 @@ $footer-text: #cecece;
                 box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
                 margin: 20px 0px;
                 width: 100%;
+                cursor: pointer;
             }
         }
         .big--photo {
@@ -63,7 +67,7 @@ $footer-text: #cecece;
                 max-height: 840px;
                 max-width: 560px;
                 width: 100%;
-                min-width: 200px;
+                min-width: 250px;
             }
         }
         .info--box {
@@ -77,6 +81,10 @@ $footer-text: #cecece;
                 h2 {
                     font-size: 1.5em;
                     color: $dark-text;
+                    font-family: ChampagneBold;
+                    span {
+                        font-family: Generica;
+                    }
                 }
                 .section--rate {
                     display: flex;
@@ -113,6 +121,7 @@ $footer-text: #cecece;
                         padding: 10px 20px 0px 0px;
                         font-weight: 900;
                         font-size: 1.2em;
+                        font-family: ChampagneBold;
                         span {
                             color: $gray;
                             text-decoration: line-through;
@@ -128,6 +137,7 @@ $footer-text: #cecece;
                 p {
                     font-weight: 900;
                     color: $dark-text;
+                    font-family: ChampagneLimousines;
                 }
             }
             .section--more {
@@ -135,10 +145,17 @@ $footer-text: #cecece;
                 padding: 20px;
                 border: 1px solid $gray;
                 border-top: none;
+                font-family: Generica;
                 h3 {
                     padding: 15px 0px;
                     text-align: center;
                     color: $dark-text;
+                    font-weight: 900;
+                    font-size: 1.1em;
+                    font-family: ChampagneLimousines;
+                    span {
+                        font-weight: 100;
+                    }
                 }
             }
         }
@@ -171,10 +188,17 @@ $footer-text: #cecece;
                 align-items: center;
                 h3 {
                     padding: 0px 20px;
+                    font-family: ChampagneLimousines;
+                    font-weight: 900;
                 }
                 img {
                     padding: 10px;
                     max-height: 60px;
+                    transition: 500ms;
+                    &:hover {
+                        padding-right: 0px;
+                        padding-left: 20px;
+                    }
                 }
             }
         }
@@ -183,6 +207,8 @@ $footer-text: #cecece;
         margin: 30px 10%;
         text-align: center;
         font-size: 1.5em;
+        font-family: ChampagneLimousines;
+        font-weight: 900;
     }
     .top--sales {
         margin: 0% 10%;
@@ -195,14 +221,23 @@ $footer-text: #cecece;
                 -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
                 -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
                 box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+                max-width: 265px;
+                width: 100%;
             }
             h2 {
                 font-size: 1.4em;
                 padding: 10px 0px;
+                font-family: Generica;
+                font-weight: 900;
             }
             p {
                 font-weight: 900;
                 font-size: 1.3em;
+                font-family: ChampagneBold;
+            }
+            a {
+                text-decoration: none;
+                color: #000000;
             }
         }
     }
@@ -219,11 +254,14 @@ $footer-text: #cecece;
                 color: $white;
                 font-size: 1.3em;
                 padding: 20px 0px;
+                font-family: ChampagneBold;
+                font-weight: 900;
             }
             p {
                 color: $white;
                 font-size: 1.1em;
                 padding: 5px 0px;
+                font-family: ChampagneLimousines;
             }
             div {
                 max-width: 30%;
