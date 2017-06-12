@@ -215,20 +215,38 @@ $footer-text: #cecece;
     .content {
         display: flex;
         flex-direction: row;
-        margin: 0% 10%;
+        margin: 0% 10%; 
         justify-content: space-between;
+        @media only screen and (max-width: 1000px) {
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: space-around;
+        }
         .small--photo {
-            display: flex;
-            flex-direction: column;
+            display: flex; 
+            flex-direction: row;
             max-width: 265px;
-            min-width: 200px;
-            img {
-                -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
-                -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
-                box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
-                margin: 20px 0px;
-                width: 100%;
-                cursor: pointer;
+            @media only screen and (max-width: 1000px) {
+                max-width: 100%;
+            }
+            .photo-container{
+                    @media only screen and (max-width: 1000px) {
+                    display: flex;
+                    flex-direction: row; 
+                    justify-content: space-around;
+                    }
+                    img { 
+                    -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+                    -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+                    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+                    margin: 20px 0px;
+                    width: 100%; 
+                    cursor: pointer;
+                    max-width: 265px;
+                        @media only screen and (max-width: 1000px) {
+                        margin: 20px 10px;
+                        }
+                    }
             }
         }
         .big--photo {
@@ -386,12 +404,23 @@ $footer-text: #cecece;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        @media only screen and (max-width: 1000px) {
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+ 
         .item {
+            width: 17%;
+            @media only screen and (max-width: 1000px) {
+            width: 50%;
+            max-width: 250px; 
+            margin: 10px; 
+            } 
             img {
                 -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
                 -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
                 box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
-                max-width: 265px;
+                max-width: 265px; 
                 width: 100%;
             }
             h2 {
