@@ -78,7 +78,7 @@ $up1220: "only screen and (min-width: 1220px)";
         padding: 0;
         margin: 0;
         list-style: none;
-        overflow: hidden; 
+        overflow: hidden;
         @media #{$up1024} {
             padding: 0;
             text-align: right;
@@ -86,14 +86,14 @@ $up1220: "only screen and (min-width: 1220px)";
         li {
             display: block;
             transition: 300ms;
-            font-weight: 900; 
-//            padding: 30px 15px;
+            font-weight: 900;
+            //            padding: 30px 15px;
             &:hover {
                 background: $gray;
             }
-            @media #{$up1024} { 
+            @media #{$up1024} {
                 display: inline-block;
-                margin: 0px -3px; 
+                margin: 0px -3px;
             }
         }
         a {
@@ -115,7 +115,7 @@ $up1220: "only screen and (min-width: 1220px)";
     display: inline-block;
     right: 0;
     top: 15px;
-    cursor: pointer; 
+    cursor: pointer;
     z-index: 1000;
     @media #{$up1024} {
         display: none;
@@ -215,7 +215,7 @@ $footer-text: #cecece;
     .content {
         display: flex;
         flex-direction: row;
-        margin: 0% 10%; 
+        margin: 0% 10%;
         justify-content: space-between;
         @media only screen and (max-width: 1000px) {
             flex-wrap: wrap;
@@ -223,30 +223,33 @@ $footer-text: #cecece;
             justify-content: space-around;
         }
         .small--photo {
-            display: flex; 
+            display: flex;
             flex-direction: row;
             max-width: 265px;
             @media only screen and (max-width: 1000px) {
                 max-width: 100%;
             }
-            .photo-container{
-                    @media only screen and (max-width: 1000px) {
+            .photo-container {
+                @media only screen and (max-width: 1000px) {
                     display: flex;
-                    flex-direction: row; 
+                    flex-direction: row;
                     justify-content: space-around;
-                    }
-                    img { 
+                }
+                @media only screen and (max-width: 750px) {
+                    flex-direction: column;
+                }
+                img {
                     -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
                     -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
                     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
                     margin: 20px 0px;
-                    width: 100%; 
+                    width: 100%;
                     cursor: pointer;
                     max-width: 265px;
-                        @media only screen and (max-width: 1000px) {
+                    @media only screen and (max-width: 1000px) {
                         margin: 20px 10px;
-                        }
                     }
+                }
             }
         }
         .big--photo {
@@ -372,17 +375,27 @@ $footer-text: #cecece;
             .courier {
                 display: flex;
                 flex-direction: row;
-                flex-wrap: wrap;
+                flex-wrap: nowrap;
                 align-items: center;
+                @media only screen and (max-width: 600px) {
+                    flex-wrap: wrap;
+                    margin: 0 auto;
+                }
                 h3 {
                     padding: 0px 20px;
                     font-family: ChampagneLimousines;
                     font-weight: 900;
+                    @media only screen and (max-width: 600px) {
+                        margin: 0 auto;
+                    }
                 }
                 img {
                     padding: 10px;
                     max-height: 60px;
                     transition: 500ms;
+                    @media only screen and (max-width: 600px) {
+                        margin: 0 auto;
+                    }
                     &:hover {
                         padding-right: 0px;
                         padding-left: 20px;
@@ -408,19 +421,21 @@ $footer-text: #cecece;
             flex-wrap: wrap;
             justify-content: space-around;
         }
- 
         .item {
             width: 17%;
             @media only screen and (max-width: 1000px) {
-            width: 50%;
-            max-width: 250px; 
-            margin: 10px; 
-            } 
+                width: 50%;
+                max-width: 250px;
+                margin: 10px;
+            }
+            @media only screen and (max-width: 700px) {
+                width: 80%;
+            }
             img {
                 -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
                 -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
                 box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
-                max-width: 265px; 
+                max-width: 265px;
                 width: 100%;
             }
             h2 {
@@ -449,6 +464,9 @@ $footer-text: #cecece;
             flex-wrap: wrap;
             justify-content: space-between;
             padding-bottom: 20px;
+            @media only screen and (max-width: 600px) {
+                flex-direction: column;
+            }
             h1 {
                 color: $white;
                 font-size: 1.3em;
@@ -464,6 +482,9 @@ $footer-text: #cecece;
             }
             div {
                 max-width: 30%;
+                @media only screen and (max-width: 600px) {
+                    max-width: 100%;
+                }
             }
             .contact {
                 p {
